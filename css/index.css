@@ -111,7 +111,6 @@ body {
 
 .menu_link_text:hover::after {
   content: "";
-  /* color: #18cfab; */
   position: absolute;
   width: 100%;
   border-bottom: 3px solid #18cfab;
@@ -152,7 +151,6 @@ body {
 
 .what_we_are {
   text-transform: uppercase;
-  /* font-family: "Montserrat", sans-serif; */
   text-align: center;
   font-size: 4.06vw;
   line-height: 4.06vw;
@@ -300,7 +298,6 @@ body {
   background-color: #18cfab;
   left: calc(50% - 44px);
   top: 3.4375vw;
-  /* left: 3.67vw; */
 }
 
 .section_header::before {
@@ -512,13 +509,81 @@ body {
   border: 2px solid #18cfab;
   box-sizing: border-box;
 }
-.amazing_work_images {
-  transition-property: width;
-  transition-duration: 10s;
-  transition-timing-function: ease-out;
+
+.amazing_work_card {
+  display: none;
+  position: relative;
   width: 14.84vw;
   height: 10.99vw;
+}
+
+.amazing_work_images_front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.image_back_side {
+  position: absolute;
+  box-sizing: border-box;
+  width: 14.84vw;
+  height: 10.99vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #18cfab;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.symbols {
+  display: flex;
+  margin-top: 2.23vw;
+}
+.circle_chain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #18cfab;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+.circle_square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #18cfab;
+  border-radius: 50%;
+}
+
+.creative_design {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.73vw;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-top: 1.25vw;
+  color: #18cfab;
+}
+
+.amazing_work_type {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.73vw;
+  line-height: 25px;
+}
+
+.image_back_side_not_active {
   display: none;
+}
+
+.amazing_work_images {
+  width: 14.84vw;
+  height: 10.99vw;
 }
 
 .all_works_images {
@@ -546,13 +611,12 @@ body {
   display: flex;
   transition-property: width;
   transition-duration: 10s;
-  /* transition-timing-function: ease-out; */
-  /* width: 17vw; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
 .load_more_btn {
   display: flex;
-  /* justify-content: space-between; */
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -567,7 +631,6 @@ body {
   height: 6.22vh;
   background-color: #18cfab;
   border-radius: 5px;
-  /* text-align: center; */
   color: #ffffff;
   cursor: pointer;
 }
